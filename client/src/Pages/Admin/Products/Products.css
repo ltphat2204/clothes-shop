@@ -1,0 +1,28 @@
+.action_container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+.action_container .action-button{
+    color: #000;
+    background-color: #fff;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+.action_container .action-button:not(:last-child){
+    margin-right: 12px;
+}
+.action_container .action-button:hover{
+    background-color: #ccc !important;
+    color: #fff !important;
+}
+.action_container .action-button svg{
+    margin-right: 4px;
+}

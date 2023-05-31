@@ -1,0 +1,49 @@
+footer{
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    padding: 16px 24px 64px 24px;
+    border-top: 1px solid #666;
+    margin-top: 24px;
+}
+footer > div{
+    flex: 1;
+}
+footer h3{
+    margin-bottom: 16px;
+}
+footer ul li{
+    list-style: disc;
+    margin-left: 16px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+footer ul li::before{
+    content: "-";
+    right: calc(100% + 8px);
+    bottom: 50%;
+    transform: translateY(50%);
+    position: absolute;
+}
+footer ul li:not(:last-child){
+    margin-bottom: 8px;
+}
+footer a{
+    text-decoration: underline;
+}
+footer a:hover{
+    color: #c3c3c3;
+    text-decoration: underline;
+}
+footer svg{
+    margin-right: 8px;
+}
+@media screen and (max-width: 768px){
+    footer{
+        flex-direction: column;
+    }
+    footer > div:not(:last-child){
+        margin-bottom: 24px;
+    }
+}

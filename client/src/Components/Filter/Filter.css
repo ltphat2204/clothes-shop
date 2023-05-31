@@ -1,0 +1,54 @@
+.filter{
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    padding: 8px 12px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 8px;
+    flex: 64.03px 0 0;
+    cursor: pointer;
+}
+.model-overlay{
+    transform: translateX(100%);
+    position: fixed;
+    background-color: rgba(0, 0, 0, .4);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+}
+.model-overlay.open{
+    transform: translateX(0);
+}
+#modal-close{
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 32px;
+    z-index: 1000;
+    cursor: pointer;
+}
+#filter-form{
+    padding: 64px 32px;
+    width: 100%;
+    max-width: 300px;
+    position: fixed;
+    background-color: #fff;
+    color: #000;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1000;
+}
+#filter-form .action_container{
+    margin-top: 24px;
+}
+#filter-form .action-button:first-child{
+    border: 1px solid #333;
+}
+#filter-form .action-button:last-child{
+    background-color: #000;
+    color: #fff;
+}

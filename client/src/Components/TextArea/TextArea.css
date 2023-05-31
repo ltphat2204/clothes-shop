@@ -1,0 +1,12 @@
+.input-wrap textarea{
+    margin-top: 8px;
+    width: 100%;
+    font-size: 16px;
+    color: #666;
+    border: 2px solid #ccc;
+    padding: 8px 4px;
+}
+.input-wrap textarea:focus{
+    border: 2px solid #000;
+    color: #000;
+}

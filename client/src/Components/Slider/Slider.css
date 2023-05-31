@@ -1,0 +1,40 @@
+.slider-main{
+    position: relative;
+}
+.slide-button{
+    font-size: 40px;
+    width: 40px;
+    opacity: .3;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #b0b0b0;
+    color: #fff;
+}
+.slide-button.left{
+    left: 0;
+}
+.slide-button.right{
+    right: 0;
+}
+.slide-button:hover{
+    opacity: 1;
+}
+.slider-list{
+    display: flex;
+    justify-content: center;
+}
+.slider-list img{
+    flex: 20% 0 0;
+    max-width: 20%;
+    opacity: .5;
+    cursor: pointer;
+    margin: 4px;
+}
+.slider-list img.selected{
+    opacity: 1;
+}

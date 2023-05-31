@@ -1,0 +1,21 @@
+.file-button{
+    padding: 12px 24px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    margin-top: 8px;
+    width: fit-content;
+    border-radius: 8px;
+}
+.preview-wrap{
+    margin: 8px auto;
+    width: 300px;
+    height: auto;
+}
+.preview-wrap img{
+    border: 1px solid #c3c3c3;
+}
+.preview-wrap img:not(:first-child){
+    margin-top: 8px;
+}

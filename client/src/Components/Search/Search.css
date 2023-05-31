@@ -1,0 +1,12 @@
+.search-wrap{
+    font-size: 24px;
+    padding: 8px 12px;
+    border: 1px solid #c3c3c3;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    flex: calc(100% - 64.03px - 16px) 0 0;
+}
+.search-wrap input{
+    width: calc(100% - 24px);
+}

@@ -1,0 +1,31 @@
+#tab_container{
+    padding: 64px 0;
+    width: 200px;
+    flex: 200px 0 0;
+    background-color: #000;
+    color: #fff;
+    font-size: 24px;
+}
+#tab_container .tab_button{
+    display: block;
+    padding: 16px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#tab_container .tab_button.active{
+    background-color: #f1f2f3;
+    color: #000;
+}
+
+#tab_container .tab_button:not(:last-child){
+    border-bottom: 1px solid #000;
+}
+
+#tab_container .tab_button svg{
+    flex: 30px 0 0;
+    width: 24px;
+    height: 24px;
+    margin-right: 4px;
+}
