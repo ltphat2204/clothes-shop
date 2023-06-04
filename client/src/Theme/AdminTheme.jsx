@@ -10,7 +10,7 @@ export default function AdminTheme(){
         "statistic": "Thống kê",
         "products": "Sản phẩm",
         "assets": "Hình ảnh",
-        "accounts": "Tài khoản"
+        "accounts": "Tài khoản nhân viên"
     }
     const [title, setTitle] = useState('');
 

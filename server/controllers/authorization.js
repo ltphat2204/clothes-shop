@@ -17,6 +17,25 @@ controller.get = async (req, res) => {
 	}
 }
 
+controller.getStaff = async (req, res) => {
+	const staff = await userModel.find({role: "staff"}).select('-password').sort({"createdAt": "desc"});
+	res.status(200).json(staff);
+}
+
+controller.deleteStaff = async (req, res) => {
+	try {
+		const staff = await userModel.findByIdAndDelete(req.params.id);
+		if (staff.deletedCount){
+			res.status(200).json({message: `user with id ${id} deleted successfully!`});
+		}else{
+			res.status(404).json({message: "Id not exist!"});
+		}
+	}catch(error) {
+		console.log(error)
+		res.status(500).json({ success: false, message: 'Internal server error' })
+	}
+}
+
 controller.signup = async (req, res) => {
 	const { username, password, role } = req.body;
 

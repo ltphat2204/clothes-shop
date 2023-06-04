@@ -11,6 +11,7 @@ import Signup from './Pages/Authorization/Signup';
 import { UserContext } from './Context/UserContext';
 import { useContext } from 'react';
 import Loading from './Components/Loading/Loading';
+import Account from './Pages/Admin/Account/Account';
 
 function App() {
   const { isAuthorizing } = useContext(UserContext);
@@ -29,6 +30,7 @@ function App() {
           </Route>
           <Route path='/admin' element={<AdminTheme/>}>
             <Route path='products' element={<ProductsAdmin/>}/>
+            <Route path='accounts' element={<Account/>}/>
             <Route path='*' />
           </Route>
         </Routes>

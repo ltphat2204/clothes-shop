@@ -7,7 +7,7 @@ export default function AuthorizedOnly(){
     const { user } = useContext(UserContext);
 
     useEffect(()=>{
-        if (!user) navigate('/signin');
+        if (!user || user.role === "customer") navigate('/signin');
     }, [user]);
 
     return (

@@ -15,8 +15,8 @@ export default function ProductCard({id, thumbnail, hoverImage, name, price, qua
             <div className="product-content" onClick={onClick}>
                 <h3 className="product-name">{name}</h3>
                 <div className="product-price">{`${price.toLocaleString()} VNĐ`}</div>
-                {user !== null && user.role === "admin" && <div className="product-price">{`Còn ${quantity} sản phẩm`}</div>}
-                {user !== null && user.role === "admin" && <div onClick={()=>setUpdate(true)} className="product-update">Cập nhật số lượng</div>}
+                {user !== null && user.role !== "customer" && <div className="product-price">{`Còn ${quantity} sản phẩm`}</div>}
+                {user !== null && user.role !== "customer" && <div onClick={()=>setUpdate(true)} className="product-update">Cập nhật số lượng</div>}
             </div>
             {update && <UpdateForm id={id} onClose={()=>setUpdate(false)} onSuccess={onReload}/>}
         </li>

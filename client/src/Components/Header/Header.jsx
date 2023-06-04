@@ -49,7 +49,7 @@ export default function Header(){
                     </Link>
                     <span id="user_action" onClick={user ? ()=>setLogoutMenu(!logoutMenu) : ()=>navigate('/signin')}>
                         <FaRegUserCircle/>
-                        {logoutMenu && <div ref={signoutRef} onClick={()=>{setUser(null); window.location.reload();}} id="signout">Đăng xuất</div>}
+                        {logoutMenu && <div ref={signoutRef} onClick={()=>{document.cookie = "user_id=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;"; setUser(null); window.location.reload();}} id="signout">Đăng xuất</div>}
                     </span>
                 </div>
             </nav>
@@ -65,7 +65,7 @@ export default function Header(){
                     <NavLink to='/'>Cửa hàng</NavLink>
                     <NavLink to='/'>Về chúng tôi</NavLink>
                     <NavLink to='/'>Liên hệ</NavLink>
-                    {user && <div onClick={()=>{setUser(null); window.location.reload();}} id="signout">Đăng xuất</div>}
+                    {user && <div onClick={()=>{document.cookie = "user_id=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;"; setUser(null);  window.location.reload();}} id="signout">Đăng xuất</div>}
                 </div>
             </nav>
         </header>

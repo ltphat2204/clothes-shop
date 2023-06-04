@@ -18,4 +18,14 @@ router.post('/signup', controller.signup);
 // @access Public
 router.post('/signin', controller.signin);
 
+// @route GET /authorization/staff
+// @desc Find user in database
+// @access Public
+router.get('/staff', controller.getStaff);
+
+// @route DELETE /authorization/staff/:id
+// @desc Find user in database
+// @access Public
+router.delete('/staff/:id', controller.deleteStaff);
+
 module.exports = router;

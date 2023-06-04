@@ -28,7 +28,7 @@ export default function ListProducts({list, onReload}){
                         name={val.name}
                         price={val.price}
                         onClick={() => {
-                            if(user === null || user.role !== "admin") navigate(`/products/${val.id}`);
+                            if(user === null || user.role === "customer") navigate(`/products/${val.id}`);
                         }}
                         onReload={onReload}
                     />
